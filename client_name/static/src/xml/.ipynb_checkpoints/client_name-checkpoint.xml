@@ -6,9 +6,18 @@
                 <div>Cliente: <t t-esc='receipt.client.name' /></div>
             </t>
     	</xpath>
-        <xpath expr="//div[@class='pos-receipt-contact']" position="inside">
-    		<t t-if='receipt.company.street'>
-                <div>Address: <t t-esc='receipt.company.street' /></div>
+        <xpath expr="//div[@class='cashier']" position="before">
+    		<t t-if="receipt.company.name == 'LA CIMA'">
+                <div>Dirección: CALLE 1 4565 - B, LOS ROBLES. ZAPOPAN, JALISCO CP:45134</div>
+            </t>
+            <t t-if="receipt.company.name == 'PALOMAR'">
+                <div>Dirección: PUENTE EL PALOMAR 561, CAMPANARIO. ZAPOPAN, JALISCO CP:45609</div>
+            </t>
+            <t t-if="receipt.company.name == 'VALLE REAL'">
+                <div>Dirección: AV. DEL SERVIDOR PÚBLICO 1195 Int. 13C, ZONA REAL. ZAPOPAN, JALISCO CP:45138</div>
+            </t>
+            <t t-if="receipt.company.name == 'GYMA'">
+                <div>Dirección: AV. DEL SERVIDOR PÚBLICO 1195 Int. 13C, ZONA REAL. ZAPOPAN, JALISCO CP:45138</div>
             </t>
     	</xpath>
     </t>
